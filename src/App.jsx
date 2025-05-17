@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandPage from './pages/LandPage';
 
 function App() {
   return(
-    <div className='container'>
-      <h1 className='mt-5 mb-5 text-center'><b>PHP React.js + CRUD Application</b></h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route index element={<LandPage />} />
+      </Routes>
+    </Router>
   )
 
 }
